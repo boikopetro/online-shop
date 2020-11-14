@@ -27,12 +27,12 @@ class ProductList {
                       <button class="btn btn-info" data-toggle="modal"
                         data-target="#productInfoModal" data-id="${
                           product.id
-                        }">Info
+                        }">Детальна інформація
                       </button>
                       <button class="btn btn-primary buy" data-id="${
                         product.id
                       }">
-                        $${product.price} - Buy
+                        $${product.price} - Купити
                       </button>
                     </div>
                   </div>

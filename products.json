@@ -1,58 +1,58 @@
 [
     {
         "id": "1",
-        "title": "Large drone",
-        "image": "drone-large.jpg",
-        "description": "Large drone for most critical missions. Can carry load.",
+        "title": "Торт01",
+        "image": "cake01.jpg",
+        "description": "опис",
         "price": 499.99
     },
     {
         "id": "2",
-        "title": "Small drone",
-        "image": "drone-small.jpg",
-        "description": "Small drone. Can fly undetected.",
+        "title": "Торт02",
+        "image": "cake02.jpg",
+        "description": "опис",
         "price": 199.99
     },
     {
         "id": "3",
-        "title": "Blue drone",
-        "image": "drone-blue.jpg",
-        "description": "Nice-looking drone in blue color. Has built-in HD camera",
+        "title": "Торт03",
+        "image": "cake03.jpg",
+        "description": "опис",
         "price": 249.99
     },
     {
         "id": "4",
-        "title": "Red drone",
-        "image": "drone-red.jpg",
-        "description": "Nice-looking drone in red color",
+        "title": "Торт04",
+        "image": "cake04.jpg",
+        "description": "опис",
         "price": 229.99
     },
     {
         "id": "5",
-        "title": "Black gyroboard",
-        "image": "gyroboard-black.jpg",
-        "description": "Black gyroboard to match your style",
+        "title": "Торт05",
+        "image": "cake05.jpg",
+        "description": "опис",
         "price": 729.99
     },
     {
         "id": "6",
-        "title": "White gyroboard",
-        "image": "gyroboard-white.jpg",
-        "description": "White gyroboard with blue lights",
+        "title": "Торт06",
+        "image": "cake06.jpg",
+        "description": "опис",
         "price": 829.99
     },
     {
         "id": "7",
-        "title": "Tesla Model X",
-        "image": "tesla-x.jpg",
-        "description": "Best crossover in the World",
-        "price": 99999.99
+        "title": "Торт07",
+        "image": "cake07.jpg",
+        "description": "опис",
+        "price": 999.99
     },
     {
         "id": "8",
-        "title": "Tesla Roadster",
-        "image": "tesla-roadster.jpg",
-        "description": "Best sports car in the World",
-        "price": 249999.99
+        "title": "Торт08",
+        "image": "cake08.jpg",
+        "description": "опис",
+        "price": 299.99
     }
 ]

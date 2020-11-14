@@ -1,5 +1,3 @@
-// This is simple sample how to serve static website and save form data to file with NodeJS
-// Author: programming mentor
 // Usage:
 // 1. Install dependencies: npm i
 // 2. Run: server node server.js

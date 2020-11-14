@@ -10,6 +10,7 @@
     max-width: 400px;
     margin-top: 150px;
     text-align: center;
+    height: 300px;
 }
 .card {
     height: 100%;
@@ -25,4 +26,9 @@
 
 .btn {
     padding: 0.75rem 0.7rem;
+}
+
+.active { 
+    background-color:  rgb(185, 177, 165);
+
 }
