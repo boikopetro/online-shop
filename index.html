@@ -124,21 +124,21 @@
             <div class="cart-product-list-container"></div>
             <hr>
             <div class="container">
-              <form>
+               <form action="https://formspree.io/f/xdopddzl" method="POST">
                 <div class="form-group row">
                   <label for="client-name" class="col-4 col-form-label">Ваше ім`я:</label>
-                  <input class="form-control col-8" type="text" id="client-name" required>
+                  <input class="form-control col-8" type="text" id="client-name" name="Замовник:" placeholder="ім'я" required>
                 </div>
                 <div class="form-group row">
                   <label for="client-email" class="col-4 col-form-label">Ваш email:</label>
-                  <input class="form-control col-8" type="email" id="client-email" required>
+                  <input class="form-control col-8" type="email" id="client-email" name="email:" placeholder="email" required>
                 </div>
               </form>
             </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
-            <button class="btn btn-primary order">Замовити</button>
+            <button class="button btn btn-primary order" type="submit">Замовити</button>
           </div>
         </div>
       </div>
