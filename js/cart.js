@@ -94,12 +94,14 @@ class Cart {
           this.saveCart();
           this.updateBadge();
           this.renderCart();
-          window.showAlert('Дякую! ' + responseText);
+          window.showAlert('Дякуємо за покупки! ');
           this.cartContainer.modal('hide');
         })
-        .catch(error => showAlert('There is an error: ' + error, true));
-    } else {
-      window.showAlert('Будь ласка заповніть всі поля', false);
+        .catch(error => showAlert('Щось не так: ' + error, true));
+    } if (document.querySelector('#client-name').value==='') {
+      window.showAlert('Будь ласка введіть ім\'я', false);
+    } else if (document.querySelector('#client-email').value==='') {
+      window.showAlert('Будь ласка введіть email', false);  
     }
   }
 }
