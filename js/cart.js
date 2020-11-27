@@ -100,8 +100,11 @@ class Cart {
         .catch(error => showAlert('Щось не так: ' + error, true));
     } if (document.querySelector('#client-name').value==='') {
       window.showAlert('Будь ласка введіть ім\'я', false);
+    } else if (document.querySelector('#client-tel').value==='') {
+      window.showAlert('Будь ласка введіть номер телефону', false); 
     } else if (document.querySelector('#client-email').value==='') {
       window.showAlert('Будь ласка введіть email', false);  
     }
   }
 }
+
