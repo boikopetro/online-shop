@@ -104,7 +104,15 @@ class Cart {
       window.showAlert('Будь ласка введіть номер телефону', false); 
     } else if (document.querySelector('#client-email').value==='') {
       window.showAlert('Будь ласка введіть email', false);  
-    }
+    } ValidPhone()
   }
 }
+
+//phone mask
+let element = document.getElementById('client-tel');
+let maskOption = {
+    mask: "+38(000)000-00-00",
+    lazy: false
+}
+let mask = new IMask(element, maskOption)
 
