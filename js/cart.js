@@ -73,6 +73,8 @@ class Cart {
     $('#cart-badge').text(Object.keys(this.cart).length);
   }
   order(ev) {
+    const regex = /^\+38\(0\d{2}\)\d{3}\-\d{2}\-\d{2}/;
+    const validation = regex.test(document.getElementById('client-tel').value);
     const form = this.cartContainer.find('form')[0];
     if (form.checkValidity()) {
       ev.preventDefault();
@@ -100,11 +102,18 @@ class Cart {
         .catch(error => showAlert('Щось не так: ' + error, true));
     } if (document.querySelector('#client-name').value==='') {
       window.showAlert('Будь ласка введіть ім\'я', false);
-    } else if (document.querySelector('#client-tel').value==='') {
+    } else if (document.querySelector('#client-tel').value==='+38(___)___-__-__') {
       window.showAlert('Будь ласка введіть номер телефону', false); 
-    } else if (document.querySelector('#client-email').value==='') {
+    } 
+    else if (validation!==true) {
+      window.showAlert('Невірно введений номер телефону', false)
+    }
+    
+    
+    
+    else if (document.querySelector('#client-email').value==='') {
       window.showAlert('Будь ласка введіть email', false);  
-    } ValidPhone()
+    }
   }
 }
 
