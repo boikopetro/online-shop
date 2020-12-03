@@ -49,7 +49,7 @@ class Cart {
     cartDomSting += `
                 <div class="row">
                     <div class="col-5"><strong>До оплати:</strong></div>
-                    <div class="col-3"><strong>$${total}</strong></div>
+                    <div class="col-3" id="empty"><strong>$${total}</strong></div>
                 </div>            
         </div>`;
     this.cartContainer.find('.cart-product-list-container').html(cartDomSting);
@@ -82,21 +82,27 @@ class Cart {
     const regexPhone = /^\+38\(0\d{2}\)\d{3}\-\d{2}\-\d{2}/;
     const phoneValidation = regexPhone.test(document.getElementById('client-tel').value);
     const form = this.cartContainer.find('form')[0];
-    if (document.querySelector('#client-name').value==='') {
+
+    if (document.getElementById('empty').textContent==='$0.00') {
+      window.showAlert('Ви ще не добавили товар до корзини...', false)
+    } else if (document.querySelector('#client-name').value==='') {
       window.showAlert('Будь ласка введіть ім\'я', false);
-    } else if (nameValidation!==true) {
+    } else if (nameValidation !== true) {
       window.showAlert('Невірно введене ім`я', false);
-    } else if (document.querySelector('#client-tel').value==='+38(___)___-__-__') {
+    } else if (document.querySelector('#client-tel').value === '+38(___)___-__-__') {
       window.showAlert('Будь ласка введіть номер телефону', false); 
-    } else if (phoneValidation!==true) {
+    } else if (phoneValidation !== true) {
       window.showAlert('Невірно введений номер телефону', false)
     } else if (document.querySelector('#client-email').value==='') {
       window.showAlert('Будь ласка введіть email', false);  
-    } else if (emailValidation!==true) {
+    } else if (emailValidation !== true) {
       window.showAlert('Невірно введений email', false);  
-    } else if (emailValidation===true) {
+    } else if (emailValidation === true) {
       formValidation = true;  
-    }
+    } 
+    
+    
+
   //end form validation
     if (formValidation) {
       ev.preventDefault();
