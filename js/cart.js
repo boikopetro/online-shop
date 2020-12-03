@@ -73,10 +73,28 @@ class Cart {
     $('#cart-badge').text(Object.keys(this.cart).length);
   }
   order(ev) {
-    const regex = /^\+38\(0\d{2}\)\d{3}\-\d{2}\-\d{2}/;
-    const validation = regex.test(document.getElementById('client-tel').value);
+  //start form validation
+    let formValidation = false;
+    const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+    const emailValidation = regexEmail.test(document.getElementById('client-email').value);
+    const regexPhone = /^\+38\(0\d{2}\)\d{3}\-\d{2}\-\d{2}/;
+    const phoneValidation = regexPhone.test(document.getElementById('client-tel').value);
     const form = this.cartContainer.find('form')[0];
-    if (form.checkValidity()) {
+    if (document.querySelector('#client-name').value==='') {
+      window.showAlert('Будь ласка введіть ім\'я', false);
+    } else if (document.querySelector('#client-tel').value==='+38(___)___-__-__') {
+      window.showAlert('Будь ласка введіть номер телефону', false); 
+    } else if (phoneValidation!==true) {
+      window.showAlert('Невірно введений номер телефону', false)
+    } else if (document.querySelector('#client-email').value==='') {
+      window.showAlert('Будь ласка введіть email', false);  
+    } else if (emailValidation!==true) {
+      window.showAlert('Невірно введений email', false);  
+    } else if (emailValidation===true) {
+      formValidation = true;  
+    }
+  //end form validation
+    if (formValidation) {
       ev.preventDefault();
       fetch('order', {
         method: 'POST',
@@ -100,28 +118,15 @@ class Cart {
           this.cartContainer.modal('hide');
         })
         .catch(error => showAlert('Щось не так: ' + error, true));
-    } if (document.querySelector('#client-name').value==='') {
-      window.showAlert('Будь ласка введіть ім\'я', false);
-    } else if (document.querySelector('#client-tel').value==='+38(___)___-__-__') {
-      window.showAlert('Будь ласка введіть номер телефону', false); 
     } 
-    else if (validation!==true) {
-      window.showAlert('Невірно введений номер телефону', false)
-    }
-    
-    
-    
-    else if (document.querySelector('#client-email').value==='') {
-      window.showAlert('Будь ласка введіть email', false);  
-    }
   }
 }
 
 //phone mask
-let element = document.getElementById('client-tel');
-let maskOption = {
+const element = document.getElementById('client-tel');
+const maskOption = {
     mask: "+38(000)000-00-00",
     lazy: false
 }
-let mask = new IMask(element, maskOption)
+const mask = new IMask(element, maskOption)
 
