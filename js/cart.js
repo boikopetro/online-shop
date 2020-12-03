@@ -75,6 +75,8 @@ class Cart {
   order(ev) {
   //start form validation
     let formValidation = false;
+    const regexName = /^[А-Ь][а-ь]{1,15}/
+    const nameValidation = regexName.test(document.getElementById('client-name').value)
     const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
     const emailValidation = regexEmail.test(document.getElementById('client-email').value);
     const regexPhone = /^\+38\(0\d{2}\)\d{3}\-\d{2}\-\d{2}/;
@@ -82,6 +84,8 @@ class Cart {
     const form = this.cartContainer.find('form')[0];
     if (document.querySelector('#client-name').value==='') {
       window.showAlert('Будь ласка введіть ім\'я', false);
+    } else if (nameValidation!==true) {
+      window.showAlert('Невірно введене ім`я', false);
     } else if (document.querySelector('#client-tel').value==='+38(___)___-__-__') {
       window.showAlert('Будь ласка введіть номер телефону', false); 
     } else if (phoneValidation!==true) {
