@@ -1,6 +1,6 @@
 // Usage:
 // 1. Install dependencies: npm i
-// 2. Run: server node server.js
+// 2. Run: node server.js
 
 const express = require('express');
 const bodyParser = require('body-parser');

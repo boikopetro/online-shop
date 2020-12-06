@@ -100,10 +100,8 @@ class Cart {
     } else if (emailValidation === true) {
       formValidation = true;  
     } 
-    
-    
-
   //end form validation
+  
     if (formValidation) {
       ev.preventDefault();
       fetch('order', {
@@ -113,6 +111,7 @@ class Cart {
         },
         body: JSON.stringify({
           clientName: document.querySelector('#client-name').value,
+          clientTel: document.querySelector('#client-tel').value,
           clientEmail: document.querySelector('#client-email').value,
           cart: this.cart
         })
