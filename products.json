@@ -7,7 +7,7 @@
         "price": 499.99
     },
     {
-        "id": "2",
+        "id": "Торт02",
         "title": "Торт02",
         "image": "cake02.jpg",
         "description": "опис",
@@ -21,35 +21,35 @@
         "price": 249.99
     },
     {
-        "id": "4",
+        "id": "Торт04",
         "title": "Торт04",
         "image": "cake04.jpg",
         "description": "опис",
         "price": 229.99
     },
     {
-        "id": "5",
+        "id": "Торт05",
         "title": "Торт05",
         "image": "cake05.jpg",
         "description": "опис",
         "price": 729.99
     },
     {
-        "id": "6",
+        "id": "Торт06",
         "title": "Торт06",
         "image": "cake06.jpg",
         "description": "опис",
         "price": 829.99
     },
     {
-        "id": "7",
+        "id": "Торт07",
         "title": "Торт07",
         "image": "cake07.jpg",
         "description": "опис",
         "price": 999.99
     },
     {
-        "id": "8",
+        "id": "Торт08",
         "title": "Торт08",
         "image": "cake08.jpg",
         "description": "опис",
